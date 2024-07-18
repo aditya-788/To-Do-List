@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    background: linear-gradient(155deg, #f6f3a7, #f5b074d6);
+}
+.todo{
+    width: 100%;
+    max-width: 540px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    background: #fff;
+}
+.todo h2{
+    color: #211e1e;
+    text-align: center;
+    margin-top: -20px;
+}
+.search-bar{
+    display: flex;
+    background: #f6f3a7;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    margin: 20px 0;
+}
+input{
+    padding: 10px 25px;
+    min-width: 70%;
+    border: none;
+    outline: none;
+    color: #5d5d5d;
+    font-size: 16px;
+    background: transparent;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    margin: 5px;
+    background: #f2ae72;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 40px;
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-image: url(./image/emptycheckbox.png);
+    background-size: cover;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked{
+    color: #555555a6;
+}
+ul li.checked::before{
+    background-image: url(./image/done.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 3px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 22px;
+    color: #171717;
+    text-align: center;
+}
+ul li span:hover{
+    background: #d96459;
+    border-radius: 50%;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+    button {
+        padding: 12px 30px;
+        font-size: 14px;
+        margin-left: -25px; /* Adjusted margin to move button to the left */
+    }
+}
